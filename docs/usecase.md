@@ -27,9 +27,9 @@ CSVデータに基づいて各テーブルに挿入されるデータをシミ�
 
 **customer_stage_calculations テーブルへの挿入データ**:
 
-| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | combined_investment_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
-|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
-| 1  | CUS001      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | NONE             | 2500000.00    | 0.00                     | 0.00                     | 0.00                        | 0.00                              | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
+| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
+|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
+| 1  | CUS001      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | NONE             | 2500000.00    | 0.00                     | 0.00                     | 0.00                              | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
 
 **condition_evaluation_results テーブルへの挿入データ**:
 
@@ -57,9 +57,9 @@ CSVデータに基づいて各テーブルに挿入されるデータをシミ�
 
 **customer_stage_calculations テーブルへの挿入データ**:
 
-| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | combined_investment_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
-|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
-| 2  | CUS002      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | SILVER           | 3500000.00    | 0.00                     | 0.00                     | 0.00                        | 0.00                              | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
+| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
+|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
+| 2  | CUS002      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | SILVER           | 3500000.00    | 0.00                     | 0.00                     | 0.00                              | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
 
 **condition_evaluation_results テーブルへの挿入データ**:
 
@@ -90,9 +90,9 @@ CSVデータに基づいて各テーブルに挿入されるデータをシミ�
 
 **customer_stage_calculations テーブルへの挿入データ**:
 
-| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | combined_investment_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
-|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
-| 3  | CUS003      | 2025-04-30       | 2025-05-01 | 2025-05-31 | SILVER             | GOLD             | 8800000.00    | 3000000.00               | 3000000.00               | 6000000.00                  | 0.00                              | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
+| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
+|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
+| 3  | CUS003      | 2025-04-30       | 2025-05-01 | 2025-05-31 | SILVER             | GOLD             | 8800000.00    | 3000000.00               | 3000000.00               | 0.00                              | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
 
 **condition_evaluation_results テーブルへの挿入データ**:
 
@@ -124,9 +124,9 @@ CSVデータに基づいて各テーブルに挿入されるデータをシミ�
 
 **customer_stage_calculations テーブルへの挿入データ**:
 
-| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | combined_investment_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
-|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
-| 4  | CUS004      | 2025-04-30       | 2025-05-01 | 2025-05-31 | GOLD               | SILVER           | 9000000.00    | 1000000.00               | 1000000.00               | 2000000.00                  | 0.00                              | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
+| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
+|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
+| 4  | CUS004      | 2025-04-30       | 2025-05-01 | 2025-05-31 | GOLD               | SILVER           | 9000000.00    | 1000000.00               | 1000000.00               | 0.00                              | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
 
 **condition_evaluation_results テーブルへの挿入データ**:
 
@@ -158,9 +158,9 @@ CSVデータに基づいて各テーブルに挿入されるデータをシミ�
 
 **customer_stage_calculations テーブルへの挿入データ**:
 
-| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | combined_investment_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
-|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
-| 5  | CUS005      | 2025-04-30       | 2025-05-01 | 2025-05-31 | PLATINUM           | GOLD             | 13000000.00   | 4000000.00               | 4000000.00               | 8000000.00                  | 0.00                              | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
+| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
+|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
+| 5  | CUS005      | 2025-04-30       | 2025-05-01 | 2025-05-31 | PLATINUM           | GOLD             | 13000000.00   | 4000000.00               | 4000000.00               | 0.00                              | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
 
 **condition_evaluation_results テーブルへの挿入データ**:
 
@@ -191,9 +191,9 @@ CSVデータに基づいて各テーブルに挿入されるデータをシミ�
 
 **customer_stage_calculations テーブルへの挿入データ**:
 
-| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | combined_investment_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
-|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
-| 6  | CUS006      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | SILVER           | 1000000.00    | 0.00                     | 0.00                     | 0.00                        | 40000.00                          | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
+| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
+|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
+| 6  | CUS006      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | SILVER           | 1000000.00    | 0.00                     | 0.00                     | 40000.00                          | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
 
 **condition_evaluation_results テーブルへの挿入データ**:
 
@@ -224,9 +224,9 @@ CSVデータに基づいて各テーブルに挿入されるデータをシミ�
 
 **customer_stage_calculations テーブルへの挿入データ**:
 
-| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | combined_investment_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
-|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
-| 7  | CUS007      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | SILVER           | 1000000.00    | 0.00                     | 0.00                     | 0.00                        | 0.00                              | 40000.00                          | 0.00                 | 0                         | 2025-04-30 12:00:00 |
+| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
+|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
+| 7  | CUS007      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | SILVER           | 1000000.00    | 0.00                     | 0.00                     | 0.00                              | 40000.00                          | 0.00                 | 0                         | 2025-04-30 12:00:00 |
 
 **condition_evaluation_results テーブルへの挿入データ**:
 
@@ -257,9 +257,9 @@ CSVデータに基づいて各テーブルに挿入されるデータをシミ�
 
 **customer_stage_calculations テーブルへの挿入データ**:
 
-| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | combined_investment_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
-|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
-| 8  | CUS008      | 2025-04-30       | 2025-05-01 | 2025-05-31 | SILVER             | PLATINUM         | 13000000.00   | 6000000.00               | 6000000.00               | 12000000.00                 | 0.00                              | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
+| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
+|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
+| 8  | CUS008      | 2025-04-30       | 2025-05-01 | 2025-05-31 | SILVER             | PLATINUM         | 13000000.00   | 6000000.00               | 6000000.00               | 0.00                              | 0.00                              | 0.00                 | 0                         | 2025-04-30 12:00:00 |
 
 **condition_evaluation_results テーブルへの挿入データ**:
 
@@ -290,9 +290,9 @@ CSVデータに基づいて各テーブルに挿入されるデータをシミ�
 
 **customer_stage_calculations テーブルへの挿入データ**:
 
-| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | combined_investment_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
-|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
-| 9  | CUS009      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | SILVER           | 1000000.00    | 0.00                     | 0.00                     | 0.00                        | 0.00                              | 0.00                              | 10000000.00          | 0                         | 2025-04-30 12:00:00 |
+| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
+|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
+| 9  | CUS009      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | SILVER           | 1000000.00    | 0.00                     | 0.00                     | 0.00                              | 0.00                              | 10000000.00          | 0                         | 2025-04-30 12:00:00 |
 
 **condition_evaluation_results テーブルへの挿入データ**:
 
@@ -322,9 +322,9 @@ CSVデータに基づいて各テーブルに挿入されるデータをシミ�
 
 **customer_stage_calculations テーブルへの挿入データ**:
 
-| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | combined_investment_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
-|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
-| 10 | CUS010      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | SILVER           | 1000000.00    | 0.00                     | 0.00                     | 0.00                        | 0.00                              | 0.00                              | 0.00                 | 1200                      | 2025-04-30 12:00:00 |
+| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
+|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
+| 10 | CUS010      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | SILVER           | 1000000.00    | 0.00                     | 0.00                     | 0.00                              | 0.00                              | 0.00                 | 1200                      | 2025-04-30 12:00:00 |
 
 **condition_evaluation_results テーブルへの挿入データ**:
 
@@ -355,9 +355,9 @@ CSVデータに基づいて各テーブルに挿入されるデータをシミ�
 
 **customer_stage_calculations テーブルへの挿入データ**:
 
-| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | combined_investment_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
-|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
-| 11 | CUS011      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | PLATINUM         | 13000000.00   | 6000000.00               | 6000000.00               | 12000000.00                 | 0.00                              | 0.00                              | 10000000.00          | 1200                      | 2025-04-30 12:00:00 |
+| id | customer_id | calculation_date | valid_from | valid_to   | current_stage_code | final_stage_code | total_balance | foreign_currency_balance | investment_trust_balance | monthly_foreign_currency_purchase | monthly_investment_trust_purchase | housing_loan_balance | monthly_fx_trading_volume | created_at          |
+|----|-------------|------------------|------------|------------|--------------------|------------------|---------------|--------------------------|--------------------------|-----------------------------------|-----------------------------------|----------------------|---------------------------|---------------------|
+| 11 | CUS011      | 2025-04-30       | 2025-05-01 | 2025-05-31 | NONE               | PLATINUM         | 13000000.00   | 6000000.00               | 6000000.00               | 0.00                              | 0.00                              | 10000000.00          | 1200                      | 2025-04-30 12:00:00 |
 
 **condition_evaluation_results テーブルへの挿入データ**:
 

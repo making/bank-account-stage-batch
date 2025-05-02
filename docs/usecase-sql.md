@@ -72,7 +72,6 @@ CREATE TABLE customer_stage_calculations (
     total_balance DECIMAL(15,2) NOT NULL DEFAULT 0, -- Total account balance at month-end
     foreign_currency_balance DECIMAL(15,2) NOT NULL DEFAULT 0, -- Foreign currency deposit balance
     investment_trust_balance DECIMAL(15,2) NOT NULL DEFAULT 0, -- Investment trust balance
-    combined_investment_balance DECIMAL(15,2) NOT NULL DEFAULT 0, -- Combined balance of investments
     monthly_foreign_currency_purchase DECIMAL(15,2) NOT NULL DEFAULT 0, -- Monthly FX purchase amount
     monthly_investment_trust_purchase DECIMAL(15,2) NOT NULL DEFAULT 0, -- Monthly investment purchase
     housing_loan_balance DECIMAL(15,2) NOT NULL DEFAULT 0, -- Housing loan balance
@@ -221,13 +220,13 @@ CUS011,NONE,2025-04-30,13000000,6000000,6000000,0,0,10000000,1200
 INSERT INTO customer_stage_calculations (
   customer_id, calculation_date, valid_from, valid_to,
   current_stage_code, final_stage_code, total_balance,
-  foreign_currency_balance, investment_trust_balance, combined_investment_balance,
+  foreign_currency_balance, investment_trust_balance,
   monthly_foreign_currency_purchase, monthly_investment_trust_purchase,
   housing_loan_balance, monthly_fx_trading_volume, created_at
 ) VALUES (
   'CUS001', '2025-04-30', '2025-05-01', '2025-05-31',
   'NONE', 'NONE', 2500000.00,
-  0.00, 0.00, 0.00,
+  0.00, 0.00,
   0.00, 0.00,
   0.00, 0, '2025-04-30 12:00:00'
 );
@@ -262,13 +261,13 @@ END $$;
 INSERT INTO customer_stage_calculations (
   customer_id, calculation_date, valid_from, valid_to,
   current_stage_code, final_stage_code, total_balance,
-  foreign_currency_balance, investment_trust_balance, combined_investment_balance,
+  foreign_currency_balance, investment_trust_balance,
   monthly_foreign_currency_purchase, monthly_investment_trust_purchase,
   housing_loan_balance, monthly_fx_trading_volume, created_at
 ) VALUES (
   'CUS002', '2025-04-30', '2025-05-01', '2025-05-31',
   'NONE', 'SILVER', 3500000.00,
-  0.00, 0.00, 0.00,
+  0.00, 0.00,
   0.00, 0.00,
   0.00, 0, '2025-04-30 12:00:00'
 );
@@ -310,13 +309,13 @@ END $$;
 INSERT INTO customer_stage_calculations (
   customer_id, calculation_date, valid_from, valid_to,
   current_stage_code, final_stage_code, total_balance,
-  foreign_currency_balance, investment_trust_balance, combined_investment_balance,
+  foreign_currency_balance, investment_trust_balance,
   monthly_foreign_currency_purchase, monthly_investment_trust_purchase,
   housing_loan_balance, monthly_fx_trading_volume, created_at
 ) VALUES (
   'CUS003', '2025-04-30', '2025-05-01', '2025-05-31',
   'SILVER', 'GOLD', 8800000.00,
-  3000000.00, 3000000.00, 6000000.00,
+  3000000.00, 3000000.00,
   0.00, 0.00,
   0.00, 0, '2025-04-30 12:00:00'
 );
@@ -358,13 +357,13 @@ END $$;
 INSERT INTO customer_stage_calculations (
   customer_id, calculation_date, valid_from, valid_to,
   current_stage_code, final_stage_code, total_balance,
-  foreign_currency_balance, investment_trust_balance, combined_investment_balance,
+  foreign_currency_balance, investment_trust_balance,
   monthly_foreign_currency_purchase, monthly_investment_trust_purchase,
   housing_loan_balance, monthly_fx_trading_volume, created_at
 ) VALUES (
   'CUS004', '2025-04-30', '2025-05-01', '2025-05-31',
   'GOLD', 'SILVER', 9000000.00,
-  1000000.00, 1000000.00, 2000000.00,
+  1000000.00, 1000000.00,
   0.00, 0.00,
   0.00, 0, '2025-04-30 12:00:00'
 );
@@ -406,13 +405,13 @@ END $$;
 INSERT INTO customer_stage_calculations (
   customer_id, calculation_date, valid_from, valid_to,
   current_stage_code, final_stage_code, total_balance,
-  foreign_currency_balance, investment_trust_balance, combined_investment_balance,
+  foreign_currency_balance, investment_trust_balance,
   monthly_foreign_currency_purchase, monthly_investment_trust_purchase,
   housing_loan_balance, monthly_fx_trading_volume, created_at
 ) VALUES (
   'CUS005', '2025-04-30', '2025-05-01', '2025-05-31',
   'PLATINUM', 'GOLD', 13000000.00,
-  4000000.00, 4000000.00, 8000000.00,
+  4000000.00, 4000000.00,
   0.00, 0.00,
   0.00, 0, '2025-04-30 12:00:00'
 );
@@ -454,13 +453,13 @@ END $$;
 INSERT INTO customer_stage_calculations (
   customer_id, calculation_date, valid_from, valid_to,
   current_stage_code, final_stage_code, total_balance,
-  foreign_currency_balance, investment_trust_balance, combined_investment_balance,
+  foreign_currency_balance, investment_trust_balance,
   monthly_foreign_currency_purchase, monthly_investment_trust_purchase,
   housing_loan_balance, monthly_fx_trading_volume, created_at
 ) VALUES (
   'CUS006', '2025-04-30', '2025-05-01', '2025-05-31',
   'NONE', 'SILVER', 1000000.00,
-  0.00, 0.00, 0.00,
+  0.00, 0.00,
   40000.00, 0.00,
   0.00, 0, '2025-04-30 12:00:00'
 );
@@ -502,13 +501,13 @@ END $$;
 INSERT INTO customer_stage_calculations (
   customer_id, calculation_date, valid_from, valid_to,
   current_stage_code, final_stage_code, total_balance,
-  foreign_currency_balance, investment_trust_balance, combined_investment_balance,
+  foreign_currency_balance, investment_trust_balance,
   monthly_foreign_currency_purchase, monthly_investment_trust_purchase,
   housing_loan_balance, monthly_fx_trading_volume, created_at
 ) VALUES (
   'CUS007', '2025-04-30', '2025-05-01', '2025-05-31',
   'NONE', 'SILVER', 1000000.00,
-  0.00, 0.00, 0.00,
+  0.00, 0.00,
   0.00, 40000.00,
   0.00, 0, '2025-04-30 12:00:00'
 );
@@ -550,13 +549,13 @@ END $$;
 INSERT INTO customer_stage_calculations (
   customer_id, calculation_date, valid_from, valid_to,
   current_stage_code, final_stage_code, total_balance,
-  foreign_currency_balance, investment_trust_balance, combined_investment_balance,
+  foreign_currency_balance, investment_trust_balance,
   monthly_foreign_currency_purchase, monthly_investment_trust_purchase,
   housing_loan_balance, monthly_fx_trading_volume, created_at
 ) VALUES (
   'CUS008', '2025-04-30', '2025-05-01', '2025-05-31',
   'SILVER', 'PLATINUM', 13000000.00,
-  6000000.00, 6000000.00, 12000000.00,
+  6000000.00, 6000000.00,
   0.00, 0.00,
   0.00, 0, '2025-04-30 12:00:00'
 );
@@ -598,13 +597,13 @@ END $$;
 INSERT INTO customer_stage_calculations (
   customer_id, calculation_date, valid_from, valid_to,
   current_stage_code, final_stage_code, total_balance,
-  foreign_currency_balance, investment_trust_balance, combined_investment_balance,
+  foreign_currency_balance, investment_trust_balance,
   monthly_foreign_currency_purchase, monthly_investment_trust_purchase,
   housing_loan_balance, monthly_fx_trading_volume, created_at
 ) VALUES (
   'CUS009', '2025-04-30', '2025-05-01', '2025-05-31',
   'NONE', 'SILVER', 1000000.00,
-  0.00, 0.00, 0.00,
+  0.00, 0.00,
   0.00, 0.00,
   10000000.00, 0, '2025-04-30 12:00:00'
 );
@@ -646,13 +645,13 @@ END $$;
 INSERT INTO customer_stage_calculations (
   customer_id, calculation_date, valid_from, valid_to,
   current_stage_code, final_stage_code, total_balance,
-  foreign_currency_balance, investment_trust_balance, combined_investment_balance,
+  foreign_currency_balance, investment_trust_balance,
   monthly_foreign_currency_purchase, monthly_investment_trust_purchase,
   housing_loan_balance, monthly_fx_trading_volume, created_at
 ) VALUES (
   'CUS010', '2025-04-30', '2025-05-01', '2025-05-31',
   'NONE', 'SILVER', 1000000.00,
-  0.00, 0.00, 0.00,
+  0.00, 0.00,
   0.00, 0.00,
   0.00, 1200, '2025-04-30 12:00:00'
 );
@@ -694,13 +693,13 @@ END $$;
 INSERT INTO customer_stage_calculations (
   customer_id, calculation_date, valid_from, valid_to,
   current_stage_code, final_stage_code, total_balance,
-  foreign_currency_balance, investment_trust_balance, combined_investment_balance,
+  foreign_currency_balance, investment_trust_balance,
   monthly_foreign_currency_purchase, monthly_investment_trust_purchase,
   housing_loan_balance, monthly_fx_trading_volume, created_at
 ) VALUES (
   'CUS011', '2025-04-30', '2025-05-01', '2025-05-31',
   'NONE', 'PLATINUM', 13000000.00,
-  6000000.00, 6000000.00, 12000000.00,
+  6000000.00, 6000000.00,
   0.00, 0.00,
   10000000.00, 1200, '2025-04-30 12:00:00'
 );
@@ -775,7 +774,6 @@ SELECT
   c.total_balance,
   c.foreign_currency_balance,
   c.investment_trust_balance,
-  c.combined_investment_balance,
   c.monthly_foreign_currency_purchase,
   c.monthly_investment_trust_purchase,
   c.housing_loan_balance,

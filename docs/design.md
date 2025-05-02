@@ -183,7 +183,6 @@ CREATE TABLE customer_stage_calculations (
     total_balance DECIMAL(15, 2) NOT NULL DEFAULT 0,                     -- Total account balance at month-end
     foreign_currency_balance DECIMAL(15, 2) NOT NULL DEFAULT 0,          -- Foreign currency deposit balance
     investment_trust_balance DECIMAL(15, 2) NOT NULL DEFAULT 0,          -- Investment trust balance
-    combined_investment_balance DECIMAL(15, 2) NOT NULL DEFAULT 0,       -- Combined balance of investments
     monthly_foreign_currency_purchase DECIMAL(15, 2) NOT NULL DEFAULT 0, -- Monthly FX purchase amount
     monthly_investment_trust_purchase DECIMAL(15, 2) NOT NULL DEFAULT 0, -- Monthly investment purchase
     housing_loan_balance DECIMAL(15, 2) NOT NULL DEFAULT 0,              -- Housing loan balance
@@ -207,7 +206,6 @@ CREATE TABLE customer_stage_calculations (
 | total_balance                     | DECIMAL(15,2)   | 月末時点の口座残高合計              |
 | foreign_currency_balance          | DECIMAL(15,2)   | 月末時点の外貨預金残高              |
 | investment_trust_balance          | DECIMAL(15,2)   | 月末時点の投資信託残高              |
-| combined_investment_balance       | DECIMAL(15,2)   | 投資残高の合計                  |
 | monthly_foreign_currency_purchase | DECIMAL(15,2)   | 月間外貨購入額                  |
 | monthly_investment_trust_purchase | DECIMAL(15,2)   | 月間投資信託購入額                |
 | housing_loan_balance              | DECIMAL(15,2)   | 月末時点の住宅ローン残高             |
@@ -320,7 +318,6 @@ erDiagram
         decimal total_balance
         decimal foreign_currency_balance
         decimal investment_trust_balance
-        decimal combined_investment_balance
         decimal monthly_foreign_currency_purchase
         decimal monthly_investment_trust_purchase
         decimal housing_loan_balance
