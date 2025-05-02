@@ -9,7 +9,7 @@
 ```sql
 -- Create enums
 CREATE TYPE stage_code_enum AS ENUM ('NONE', 'SILVER', 'GOLD', 'PLATINUM');
-CREATE TYPE condition_type_enum AS ENUM ('TOTAL_BALANCE', 'FOREIGN_CURRENCY_PURCHASE', 'INVESTMENT_TRUST_PURCHASE', 'COMBINED_BALANCE_GOLD', 'COMBINED_BALANCE_PLATINUM', 'HOUSING_LOAN', 'FX_TRADING');
+CREATE TYPE condition_type_enum AS ENUM ('TOTAL_BALANCE', 'MONTHLY_FOREIGN_CURRENCY_PURCHASE', 'MONTHLY_INVESTMENT_TRUST_PURCHASE', 'COMBINED_BALANCE_GOLD', 'COMBINED_BALANCE_PLATINUM', 'HOUSING_LOAN', 'FX_TRADING');
 CREATE TYPE condition_category_enum AS ENUM ('STAGE', 'RANK_CHANGE');
 
 -- Create stages table
@@ -134,8 +134,8 @@ INSERT INTO stages (stage_code, stage_name, stage_order, valid_from) VALUES
 -- First, inserting stage conditions
 INSERT INTO conditions (condition_type, condition_name, condition_category, valid_from) VALUES
 ('TOTAL_BALANCE', '月末の総残高', 'STAGE', '2020-01-01'),
-('FOREIGN_CURRENCY_PURCHASE', '外貨預金の積立購入', 'STAGE', '2020-01-01'),
-('INVESTMENT_TRUST_PURCHASE', '投資信託 積み立てプラン', 'STAGE', '2020-01-01'),
+('MONTHLY_FOREIGN_CURRENCY_PURCHASE', '外貨預金の積立購入', 'STAGE', '2020-01-01'),
+('MONTHLY_INVESTMENT_TRUST_PURCHASE', '投資信託 積み立てプラン', 'STAGE', '2020-01-01'),
 ('COMBINED_BALANCE_GOLD', '外貨預金と投資信託の合計残高 (ゴールド)', 'STAGE', '2020-01-01'),
 ('COMBINED_BALANCE_PLATINUM', '外貨預金と投資信託の合計残高 (プラチナ)', 'STAGE', '2020-01-01'),
 ('HOUSING_LOAN', '住宅ローン残高', 'RANK_CHANGE', '2020-01-01'),
@@ -152,13 +152,13 @@ WHERE condition_type = 'TOTAL_BALANCE'
 INSERT INTO stage_conditions (id, stage_code, min_value)
 SELECT id, 'SILVER', 30000
 FROM conditions
-WHERE condition_type = 'FOREIGN_CURRENCY_PURCHASE'
+WHERE condition_type = 'MONTHLY_FOREIGN_CURRENCY_PURCHASE'
   AND condition_category = 'STAGE';
 
 INSERT INTO stage_conditions (id, stage_code, min_value)
 SELECT id, 'SILVER', 30000
 FROM conditions
-WHERE condition_type = 'INVESTMENT_TRUST_PURCHASE'
+WHERE condition_type = 'MONTHLY_INVESTMENT_TRUST_PURCHASE'
   AND condition_category = 'STAGE';
 
 -- For Gold stage: combined balance condition
