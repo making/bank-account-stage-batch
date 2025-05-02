@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+bank_account_stage_test_data.csv
