@@ -125,7 +125,7 @@ CREATE INDEX idx_customer_date ON stage_transitions (customer_id, transition_dat
 -- Initial data for stages table
 -- Inserting the basic stage definitions with their order and names
 INSERT INTO stages (stage_code, stage_name, stage_order, valid_from) VALUES
-('NONE', 'ステージなし', 0, '2020-01-01'),
+('NONE', 'ステージなし', 0.00, '2020-01-01'),
 ('SILVER', 'シルバー', 100, '2020-01-01'),
 ('GOLD', 'ゴールド', 200, '2020-01-01'),
 ('PLATINUM', 'プラチナ', 300, '2020-01-01');
@@ -247,7 +247,8 @@ BEGIN
     (calc_id, 3, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 4, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 5, false, 0.00, '2025-04-30 12:00:00'),
-    (calc_id, 6, false, 0, '2025-04-30 12:00:00');
+    (calc_id, 6, false, 0.00, '2025-04-30 12:00:00'),
+    (calc_id, 7, false, 0.00, '2025-04-30 12:00:00');
 
   -- No stage transition for this customer
 END $$;
@@ -288,7 +289,8 @@ BEGIN
     (calc_id, 3, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 4, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 5, false, 0.00, '2025-04-30 12:00:00'),
-    (calc_id, 6, false, 0, '2025-04-30 12:00:00');
+    (calc_id, 6, false, 0.00, '2025-04-30 12:00:00'),
+    (calc_id, 7, false, 0.00, '2025-04-30 12:00:00');
 
   -- Insert stage transition
   INSERT INTO stage_transitions (
@@ -335,8 +337,9 @@ BEGIN
     (calc_id, 2, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 3, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 4, true, 6000000.00, '2025-04-30 12:00:00'),
-    (calc_id, 5, false, 0.00, '2025-04-30 12:00:00'),
-    (calc_id, 6, false, 0, '2025-04-30 12:00:00');
+    (calc_id, 5, false, 6000000.00, '2025-04-30 12:00:00'),
+    (calc_id, 6, false, 0.00, '2025-04-30 12:00:00'),
+    (calc_id, 7, false, 0.00, '2025-04-30 12:00:00');
 
   -- Insert stage transition
   INSERT INTO stage_transitions (
@@ -383,8 +386,9 @@ BEGIN
     (calc_id, 2, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 3, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 4, false, 2000000.00, '2025-04-30 12:00:00'),
-    (calc_id, 5, false, 0.00, '2025-04-30 12:00:00'),
-    (calc_id, 6, false, 0, '2025-04-30 12:00:00');
+    (calc_id, 5, false, 2000000.00, '2025-04-30 12:00:00'),
+    (calc_id, 6, false, 0.00, '2025-04-30 12:00:00'),
+    (calc_id, 7, false, 0.00, '2025-04-30 12:00:00');
 
   -- Insert stage transition
   INSERT INTO stage_transitions (
@@ -431,8 +435,9 @@ BEGIN
     (calc_id, 2, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 3, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 4, true, 8000000.00, '2025-04-30 12:00:00'),
-    (calc_id, 5, false, 0.00, '2025-04-30 12:00:00'),
-    (calc_id, 6, false, 0, '2025-04-30 12:00:00');
+    (calc_id, 5, false, 8000000.00, '2025-04-30 12:00:00'),
+    (calc_id, 6, false, 0.00, '2025-04-30 12:00:00'),
+    (calc_id, 7, false, 0.00, '2025-04-30 12:00:00');
 
   -- Insert stage transition
   INSERT INTO stage_transitions (
@@ -480,7 +485,8 @@ BEGIN
     (calc_id, 3, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 4, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 5, false, 0.00, '2025-04-30 12:00:00'),
-    (calc_id, 6, false, 0, '2025-04-30 12:00:00');
+    (calc_id, 6, false, 0.00, '2025-04-30 12:00:00'),
+    (calc_id, 7, false, 0.00, '2025-04-30 12:00:00');
 
   -- Insert stage transition
   INSERT INTO stage_transitions (
@@ -528,7 +534,8 @@ BEGIN
     (calc_id, 3, true, 40000.00, '2025-04-30 12:00:00'),
     (calc_id, 4, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 5, false, 0.00, '2025-04-30 12:00:00'),
-    (calc_id, 6, false, 0, '2025-04-30 12:00:00');
+    (calc_id, 6, false, 0.00, '2025-04-30 12:00:00'),
+    (calc_id, 7, false, 0.00, '2025-04-30 12:00:00');
 
   -- Insert stage transition
   INSERT INTO stage_transitions (
@@ -574,9 +581,10 @@ BEGIN
     (calc_id, 1, true, 13000000.00, '2025-04-30 12:00:00'),
     (calc_id, 2, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 3, false, 0.00, '2025-04-30 12:00:00'),
-    (calc_id, 4, true, 12000000.00, '2025-04-30 12:00:00'),
-    (calc_id, 5, false, 0.00, '2025-04-30 12:00:00'),
-    (calc_id, 6, false, 0, '2025-04-30 12:00:00');
+    (calc_id, 4, false, 12000000.00, '2025-04-30 12:00:00'),
+    (calc_id, 5, true, 12000000.00, '2025-04-30 12:00:00'),
+    (calc_id, 6, false, 0.00, '2025-04-30 12:00:00'),
+    (calc_id, 7, false, 0.00, '2025-04-30 12:00:00');
 
   -- Insert stage transition
   INSERT INTO stage_transitions (
@@ -623,8 +631,9 @@ BEGIN
     (calc_id, 2, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 3, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 4, false, 0.00, '2025-04-30 12:00:00'),
-    (calc_id, 5, true, 10000000.00, '2025-04-30 12:00:00'),
-    (calc_id, 6, false, 0, '2025-04-30 12:00:00');
+    (calc_id, 5, false, 0.00, '2025-04-30 12:00:00'),
+    (calc_id, 6, true, 10000000.00, '2025-04-30 12:00:00'),
+    (calc_id, 7, false, 0.00, '2025-04-30 12:00:00');
 
   -- Insert stage transition
   INSERT INTO stage_transitions (
@@ -672,7 +681,8 @@ BEGIN
     (calc_id, 3, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 4, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 5, false, 0.00, '2025-04-30 12:00:00'),
-    (calc_id, 6, true, 1200, '2025-04-30 12:00:00');
+    (calc_id, 6, false, 0.00, '2025-04-30 12:00:00'),
+    (calc_id, 7, true, 1200, '2025-04-30 12:00:00');
 
   -- Insert stage transition
   INSERT INTO stage_transitions (
@@ -718,9 +728,10 @@ BEGIN
     (calc_id, 1, true, 13000000.00, '2025-04-30 12:00:00'),
     (calc_id, 2, false, 0.00, '2025-04-30 12:00:00'),
     (calc_id, 3, false, 0.00, '2025-04-30 12:00:00'),
-    (calc_id, 4, true, 12000000.00, '2025-04-30 12:00:00'),
-    (calc_id, 5, true, 10000000.00, '2025-04-30 12:00:00'),
-    (calc_id, 6, true, 1200, '2025-04-30 12:00:00');
+    (calc_id, 4, false, 12000000.00, '2025-04-30 12:00:00'),
+    (calc_id, 5, true, 12000000.00, '2025-04-30 12:00:00'),
+    (calc_id, 6, true, 10000000.00, '2025-04-30 12:00:00'),
+    (calc_id, 7, true, 1200, '2025-04-30 12:00:00');
 
   -- Insert stage transition
   INSERT INTO stage_transitions (
