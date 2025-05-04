@@ -25,11 +25,22 @@ def generate_test_data(num_records: int, month_end_date: datetime.date = None) -
     # ステージコードの定義
     stage_codes = ["NONE", "SILVER", "GOLD", "PLATINUM"]
 
+    # 重複しない顧客IDを生成するためのセット
+    used_customer_ids = set()
+
+    def generate_unique_customer_id():
+        """重複しない顧客IDを生成する"""
+        while True:
+            customer_id = f"C{random.randint(10000000, 99999999)}"
+            if customer_id not in used_customer_ids:
+                used_customer_ids.add(customer_id)
+                return customer_id
+
     # 顧客データを生成
     data = []
     for i in range(num_records):
-        # 顧客IDは「C」+8桁の数字で生成
-        customer_id = f"C{random.randint(10000000, 99999999)}"
+        # 重複しない顧客IDを生成
+        customer_id = generate_unique_customer_id()
 
         # 現在のステージをランダムに選択（新規顧客の場合はNONEが多めになるよう調整）
         weighted_stages = ["NONE"] * 6 + ["SILVER"] * 3 + ["GOLD"] * 2 + ["PLATINUM"]
