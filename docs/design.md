@@ -423,15 +423,15 @@ erDiagram
 
 1. **Reader**:
     - FlatFileItemReader を使用してCSVファイルを読み込み
-    - LineMapper でデータモデルにマッピング
 
 2. **Processor**:
+    - ItemProcessor を実装してデータを処理
     - ステージ判定ロジックを実装
     - 基本ステージの判定
     - ランクアップ条件の評価と適用
 
 3. **Writer**:
-    - JdbcBatchItemWriter を使用してデータベースに結果を書き込み
+    - ItemWriter を実装してしてデータベースに結果を書き込み
     - 複数テーブルへの書き込みをトランザクションで管理
 
 ## 7. 初期データ設定
