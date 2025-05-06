@@ -31,6 +31,9 @@ SQLのみでこのシミュレーションを実行してみたい場合は、[�
 2. **プロジェクトの雛形が欲しい人** ... [`step-0-scaffolding`ブランチ](https://github.com/making/bank-account-stage-batch/tree/step-0-scaffolding)から始めてください。データベースのスキーマ、Jobの定義および、ItemProcessor, ItemWriterの空実装が含まれています。バッチ処理として実行可能な状態ですが、FAILします。<br>ユースケースを満たすためのテストケースもTestContainersを使って実装済みです。テストを満たすようにItemProcessorとItemWriterを実装するだけで良いです。
 3. **ロジックの部品まで欲しい人** ... [`step-1-add-stage-pacakge`ブランチ](https://github.com/making/bank-account-stage-batch/tree/step-1-add-stage-pacakge)から始めてください。上記の2.に加えて、設計に従ったアカウント獲得の条件ロジックなどが`stage`パッケージに実装されています。この`stage`パッケージのクラス群を組み立ててItemProcessorとItemWriterを実装するだけで良いです。
 
+`step-0-scaffolding`または`step-1-add-stage-pacakge`からフォークしてプロジェクトを作った場合、
+該当のブランチにプルリクエストを送っていただければ、マージはしませんが、レビューコメントをいたします。
+
 ## テスト実行方法
 
 TestContainersを使って、PostgreSQLのDockerコンテナを立ち上げて、テストを実行するので、Dockerのインストールが必要です。
